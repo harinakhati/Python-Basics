@@ -1,0 +1,58 @@
+# Variables and Data Types
+
+## Purpose
+This lesson introduces Python variables and basic data types. It shows how to assign values to variables, print them, and inspect their types using the `type()` function.
+
+## Code Summary
+The lesson code contains the following steps:
+
+1. Assign variables:
+   - `name` is assigned a string value: `"Harina"`
+   - `age` is assigned an integer value: `20`
+   - `height` is assigned a floating-point number: `5.4`
+   - `is_student` is assigned a boolean value: `True`
+
+2. Display the values using `print()`.
+
+3. Print the Python data type of each variable using `print(type(variable))`.
+
+## What this teaches
+- Variables store values.
+- Python is dynamically typed: a variable can hold values of any type.
+- Common data types in Python:
+  - `str` for text
+  - `int` for whole numbers
+  - `float` for decimal numbers
+  - `bool` for True/False values
+- `type()` returns the runtime type of an object.
+
+## Expected output
+When the script runs, it should print:
+
+```
+Harina
+20
+5.4
+True
+<class 'str'>
+<class 'int'>
+<class 'float'>
+<class 'bool'>
+```
+
+## Revision notes
+- This file is a good starting point for understanding variables and data types.
+- Keep the following in mind when revising:
+  - Use meaningful variable names.
+  - Python variable names should start with a letter or underscore and cannot contain spaces.
+  - Comments help explain the purpose of each section.
+
+## Important additions to consider
+Add one or more of these concepts to make the lesson stronger:
+
+- Show reassignment of a variable with a different type to demonstrate dynamic typing.
+- Add `None` as a special type for missing values.
+- Demonstrate string formatting or concatenation when printing variables.
+- Add simple arithmetic with numeric variables.
+- Explain the difference between `print(variable)` and `print(type(variable))`.
+- Introduce `input()` to show how data can be read from the user and cast into different types.

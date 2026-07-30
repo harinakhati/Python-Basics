@@ -1,0 +1,52 @@
+# Loops — Examples and Exercises
+
+## Purpose
+This lesson shows `for` and `while` loops in Python through multiple short examples: printing sequences, iterating with `range()`, summing numbers, and a simple guessing game.
+
+## Code Summary (from `lesson5.py`)
+- Print numbers from 1 to 10 using `for i in range(1,11): print(i)`.
+- An "Even numbers" example uses `for i in range(21,2,-1): print(i/2)`.
+- Countdown from 11 to 1 using `for i in range(11,0,-1): print(i)`.
+- Sum of numbers up to `n`:
+  - Reads `n = int(input("Enter a number:"))`
+  - Uses `total = 0` and `for i in range(n): total += i` then prints `total`.
+- Guess secret number:
+  - `num = 7`
+  - Prompts user repeatedly with `while(user != num): user = int(input("Enter a number:"))`
+  - Prints a success message when guessed correctly.
+
+## What this teaches
+- `for` loops and the `range()` function.
+- `while` loops for repeated user prompts.
+- Accumulating a running total with `+=`.
+- Converting input to `int()` and basic input-driven loops.
+
+## Expected behavior and corrected examples
+- Print numbers 1–10: prints integers 1 through 10.
+- Even numbers (intended): to print even numbers from 2 to 20, use `for i in range(2, 21, 2): print(i)`.
+- Countdown: prints 11 down to 1.
+- Sum of numbers (common expectation): if you want the sum of 1..n, use `for i in range(1, n+1): total += i`. Current code sums 0..n-1.
+- Guessing game: repeatedly prompts until the user inputs `7`, then congratulates them.
+
+## Revision notes (bugs, surprising behavior, and fixes)
+- "Even numbers" example is incorrect:
+  - `range(21,2,-1)` iterates downward from 21 to 3; `i/2` produces non-integer values like `10.5`.
+  - Fix: use `range(2, 21, 2)` and print `i` (not `i/2`).
+- Sum-of-n logic:
+  - `for i in range(n): total += i` sums 0..n-1. If the lesson intends 1..n, change to `range(1, n+1)`.
+  - Consider handling negative or zero `n` input.
+- Guessing game UX:
+  - The first prompt occurs once before the loop; when entering the loop there is no message to guide the user.
+  - Improve by printing a hint or counting attempts. Also validate non-numeric input.
+- Input conversions (`int(input(...))`) can raise `ValueError` for non-integer input. Add `try`/`except` blocks.
+- Use consistent spacing and comments to make examples easier to follow.
+
+## Important additions to consider
+- Show `range()` variations explicitly: `range(stop)`, `range(start, stop)`, `range(start, stop, step)` with examples.
+- Explain that `range` is end-exclusive (stop is not included) and demonstrate off-by-one errors.
+- Demonstrate `break` and `continue` inside loops.
+- Add a safe-guard for the guessing game to allow quitting (e.g., enter `q` to quit).
+- Show how to use `enumerate()` and iterating over lists.
+- Mention performance notes for large ranges and that `range()` returns a lazy sequence.
+
+

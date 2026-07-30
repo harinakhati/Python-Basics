@@ -1,0 +1,45 @@
+# Input and Output in Python
+
+## Purpose
+This lesson demonstrates how to read data from the user with `input()` and how to display output with `print()`.
+
+## Code Summary
+The lesson contains these steps:
+
+1. Prompt the user for their name using `input()` and store it in `name`.
+2. Prompt the user for their age using `input()` and convert the result to an integer with `int()`.
+3. Prompt the user for their favorite programming language using `input()` and store it in `language`.
+4. Display a greeting and the entered values using an f-string in `print()`.
+
+## What this teaches
+- `input(prompt)` shows a prompt and returns user input as a string.
+- `input()` always returns a string, even for numbers.
+- Use `int()` to convert numeric input into an integer.
+- Use f-strings (`f"..."`) to embed variables into printed text.
+- `\n` creates a new line inside a string.
+
+## Example behavior
+If the user enters:
+- `Harina` for name
+- `20` for age
+- `Python` for language
+
+The output will be:
+
+```
+Hello Harina!
+You are 20 years old.
+Your favourite programming language is Python.
+```
+
+## Revision notes
+- Check that `int(input(...))` is used only when the user is expected to enter a whole number.
+- Mention that invalid numeric input will raise a `ValueError`.
+- Confirm prompts are clear and user-friendly.
+
+## Important additions to consider
+- Add a simple validation example for numeric input.
+- Show how to convert input to `float()` for decimal numbers.
+- Introduce `strip()` to remove extra whitespace from user input.
+- Add a second `print()` statement without f-strings to compare different formatting methods.
+- Demonstrate how to handle optional input by checking for empty strings.

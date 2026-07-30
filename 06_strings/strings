@@ -1,0 +1,13 @@
+A string is a sequence of characters enclosed in quotes.
+Python treats a string like a row of characters.
+Each character has an index.
+
+Access one character using square brackets.
+
+String Slicing- Sometimes you want part of a string.
+# string[start:stop]
+# string[start:stop:step]
+# print(text[::-1])
+
+Strings are immutable, meaning they cannot be modified after they are created.
+

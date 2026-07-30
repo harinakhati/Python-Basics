@@ -1,0 +1,69 @@
+A function is a reusable block of code that performs a specific task.
+
+
+Parameter → placeholder in the function definition.
+Argument → actual value you pass when calling.
+
+return sends a value back to the caller.
+
+print() only displays the value.
+
+The function doesn't return anything, so Python returns None by default.
+
+Scope (Local Variables)--- Variables created inside a function exist only inside that function.
+
+# Functions in Python — Calculator Example
+
+## Purpose
+This lesson shows how to organize code using functions and how to call them from a simple calculator program.
+
+## Code Summary
+- Defines four functions:
+  - `add(num1, num2)` returns the sum
+  - `subtract(num1, num2)` returns the difference
+  - `multiply(num1, num2)` returns the product
+  - `divide(num1, num2)` returns the quotient
+- Reads two numbers from user input using `float(input(...))`.
+- Enters a `while True` loop to ask for an operation: `+`, `-`, `*`, or `/`.
+- Calls the matching function and displays the result.
+- Handles the division-by-zero case with a message.
+- Repeats the prompt on invalid operation input.
+
+## What this teaches
+- Function definition and reuse.
+- Parameters vs. arguments.
+- `return` values vs. `print()` display.
+- Input conversion from string to float.
+- Using an infinite loop for repeated input until valid.
+- Basic calculator control flow.
+
+## Expected behavior
+- If the user inputs `5`, `2`, and chooses `+`, output should be:
+
+```
+Result: 7.0
+```
+
+- If the user chooses `/` and the second number is `0`, output should be:
+
+```
+Cannot divided by zero.
+```
+
+- If the choice is invalid, the program prompts again.
+
+## Revision notes (issues and improvements)
+- The `divide` function will throw a runtime error if `num2` is zero; the code catches it by printing a message but does not reset `result`.
+- In the division-by-zero branch, `result` is undefined after the message, but the code avoids printing it because of the `else` block.
+- The prompt text has extra punctuation and can be simplified: `Enter your choice (+, -, *, /): `.
+- The error message should be corrected to `Cannot divide by zero.`.
+- The loop breaks only after valid output is printed. That is okay, but if the user enters an invalid operation, the loop continues as intended.
+
+## Important additions to consider
+- Add `try`/`except ValueError` around `float(input(...))` to handle non-numeric input.
+- Add a `main()` function and use `if __name__ == "__main__":` to make the script reusable.
+- Add support for repeated calculations without exiting, or a quit option.
+- Add function docstrings and comments that explain each function purpose.
+- Show the difference between `print()` and `return` explicitly with a small example.
+- Explain local scope: variables inside functions are separate from variables outside.
+

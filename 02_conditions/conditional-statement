@@ -1,0 +1,48 @@
+# Conditional Statements — Withdrawal Example
+
+## Purpose
+This lesson demonstrates a simple `if`/`else` conditional: checking a withdrawal amount against an initial balance and responding accordingly.
+
+## Code Summary
+- `ini_amount` is set to `5000` (initial balance).
+- The user is prompted to enter a withdrawal amount using `float(input(...))`.
+- If `amount <= ini_amount`, the program prints a success message and remaining balance.
+- Otherwise, it prints an "Insufficient balance." message.
+
+## What this teaches
+- Basic `if` / `else` branching.
+- Comparing numeric values with `<=` and using arithmetic to compute the remaining balance.
+- Using `float()` to accept decimal inputs from the user.
+
+## Expected behavior
+- If `ini_amount` is `5000` and the user enters `1000`, output should be:
+
+```
+Withdrawal successful.
+Remaining balance: 4000.0
+```
+
+- If the user enters `6000`, output should be:
+
+```
+Insufficent balance.
+```
+
+## Revision notes (issues to fix or improve)
+- Typo: `Insufficent` should be `Insufficient` in the `print()` message.
+- Consider validating input:
+  - Reject negative or zero withdrawal amounts.
+  - Catch non-numeric input to avoid `ValueError` from `float()`.
+- Edge cases:
+  - If `amount == ini_amount`, withdrawal should be allowed (balance becomes zero).
+  - If `amount` is negative, treat as invalid.
+- Consider using constants or configurable values instead of a hard-coded `ini_amount`.
+- Consider formatting the remaining balance to two decimal places when printing.
+
+## Important additions to consider
+- Add input validation and error handling:
+  - Wrap `float(input(...))` in `try`/`except` to catch `ValueError`.
+  - Check `if amount <= 0:` and print a helpful message.
+- Prevent floating-point rounding surprises by using `round()` or the `decimal` module for money.
+- Show a confirmation step before finalizing the withdrawal.
+- Use a function like `def withdraw(balance, amount):` to encapsulate logic and make it testable.

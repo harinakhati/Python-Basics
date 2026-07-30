@@ -1,0 +1,67 @@
+# Operators in Python
+
+## Purpose
+This lesson demonstrates how to use arithmetic and comparison operators with values entered by the user.
+
+## Code Summary
+The lesson does the following:
+
+1. Reads two numbers from the user with `float(input(...))`.
+2. Calculates and prints arithmetic results:
+   - addition
+   - subtraction
+   - multiplication
+   - division
+   - floor division
+   - remainder (modulus)
+   - exponentiation
+3. Calculates and prints comparison results:
+   - equality
+   - inequality
+   - greater-than
+
+## What this teaches
+- `float()` converts user input into a decimal number.
+- Arithmetic operators:
+  - `+` addition
+  - `-` subtraction
+  - `*` multiplication
+  - `/` true division
+  - `//` floor division
+  - `%` remainder
+  - `**` exponentiation
+- Comparison operators return boolean values:
+  - `==` equal
+  - `!=` not equal
+  - `>` greater than
+- F-strings make formatting output easier.
+
+## Expected behavior
+For input values `5` and `2`, the output should be:
+
+```
+Addition: 7.0
+Subtracion: 3.0
+Multiplication: 10.0
+Division: 2.5
+Floor Division: 2.0
+Remainder: 1.0
+Power: 25.0
+Equal: False
+Not Equal: True
+Greater than: True
+```
+
+## Revision notes
+- There is a typo in the multiplication output: the code currently prints `num1 - num2` instead of `num1 * num2`.
+- The prompt text should be user-friendly and consistent.
+- Check division by zero for `num2` before using `/`, `//`, and `%`.
+- `print()` labels should spell `Subtraction` correctly.
+
+## Important additions to consider
+- Add multiplication correction and additional comparison operators such as `<`, `>=`, and `<=`.
+- Add input validation for numeric values and handle invalid input gracefully.
+- Explain the difference between `/` and `//` on positive and negative numbers.
+- Show the effect of operator precedence with a combined expression.
+- Display both input values before the calculations for clarity.
+

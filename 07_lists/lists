@@ -1,0 +1,56 @@
+Quick Revision Notes for Lists
+
+1. What is a list?
+- A list is an ordered collection of items enclosed in square brackets []
+- Example: numbers = [1, 2, 3]
+
+2. List properties
+- Lists are mutable, meaning you can change them after creating them.
+- Items in a list have indexes starting from 0.
+
+3. Common list operations
+- append() → adds an item to the end
+- insert(index, value) → adds an item at a specific position
+- remove(value) → removes an item by value
+- pop(index) → removes an item by index
+- clear() → removes all items
+
+4. Accessing and slicing lists
+- You can access an item using its index: names[0]
+- You can slice a list like a string: names[1:4]
+
+5. Checking membership
+- Use in to check if an item exists in a list.
+- Example: if "apple" in fruits:
+
+6. Looping through a list
+- You can loop through lists using for.
+- Example: for item in fruits:
+
+7. Common list methods
+- sort() → arranges items in order
+- reverse() → reverses the order
+- count(value) → counts how many times an item appears
+- index(value) → returns the index of an item
+- copy() → creates a copy of the list
+
+8. Nested lists
+- A list can contain other lists.
+- Example: matrix = [[1, 2], [3, 4]]
+
+9. List vs string
+- Both use indexing and slicing.
+- Lists are mutable, but strings are immutable.
+
+10. Quick revision checklist
+- Can I create a list?
+- Can I add, remove, and access items?
+- Do I know how to use append(), remove(), pop(), and sort()?
+- Can I loop through a list?
+- Do I understand nested lists and list copying?
+
+
+append() → adds one item.
+extend() → adds all items from another iterable.
+
+

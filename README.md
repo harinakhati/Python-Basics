@@ -40,8 +40,8 @@
 
 
 # 7.  Lesson 7: String
-  - look for description in "04_funtions/functions"
+  - look for description in "06_strings/strings"
 
 
-
-prepare the documentation for this file, so we can look into while revising and if anything other important to add please mention
+# 8.  Lesson 8: Lists
+  - look for description in "07_lists/lists"

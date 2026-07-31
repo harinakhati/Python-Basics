@@ -1,0 +1,70 @@
+Creating a Tuple - Use parentheses instead of square brackets.
+Accessing Elements - Exactly like a list.
+
+Once created, a tuple cannot be modified. (TypeError: 'tuple' object does not support item assignment)
+Immutability also helps avoid accidental bugs.
+
+To create a one-element tuple, include a trailing comma.  - value = (5,)
+
+Tuple Packing and Unpacking - Python lets you assign multiple values at once.
+
+Swapping Variables - a, b = b, a
+
+Tuple Methods
+-   count()
+-   index()
+
+Use a tuple when:
+    The data should not change.
+    You want to group related values together.
+    You want to return multiple values from a function.
+
+
+Quick Revision Notes for Tuples
+
+1. What is a tuple?
+- A tuple is an ordered collection of values.
+- It uses parentheses () instead of square brackets [].
+- Example: days = ("Mon", "Tue", "Wed")
+
+2. Important property: immutability
+- A tuple cannot be changed after it is created.
+- You cannot add, remove, or replace items in a tuple.
+- Example: days[0] = "Sun" will cause an error.
+
+3. Accessing elements
+- You can access tuple items using indexing.
+- Example: days[0] gives the first item.
+- Negative indexing also works: days[-1] gives the last item.
+
+4. Slicing a tuple
+- You can get a part of a tuple using slicing.
+- Example: numbers[1:4]
+
+5. Tuple packing and unpacking
+- Packing means assigning multiple values to one tuple.
+- Unpacking means assigning tuple values to separate variables.
+- Example: name, age, course = ("Harina", 20, "CS")
+
+6. One-element tuple
+- To create a tuple with one item, add a comma.
+- Example: value = (5,)
+
+7. Common tuple methods
+- count() → counts how many times an item appears
+- index() → finds the position of an item
+
+8. Swapping values
+- You can swap two variables easily using tuples.
+- Example: a, b = b, a
+
+9. Tuple vs list
+- List: mutable, uses []
+- Tuple: immutable, uses ()
+
+10. Quick revision checklist
+- Do I know how to create a tuple?
+- Can I access items by index?
+- Do I know that tuples are immutable?
+- Do I know count() and index()?
+- Can I use unpacking and swapping?

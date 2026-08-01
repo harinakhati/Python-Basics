@@ -1,0 +1,55 @@
+If a list stores values by position (index), a dictionary stores values by name (key).
+
+Creating a Dictionary:
+    dictionary = {
+        key: value,
+        key: value
+    }
+
+Nested Dictionaries - A dictionary can contain another dictionary.
+
+--- Quick Revision Notes ---
+A dictionary stores data as key-value pairs.
+Each key is unique, and values can be repeated.
+Dictionaries are useful when you want to access data using meaningful names instead of indexes.
+
+Creating a dictionary:
+student = {"name": "Ram", "age": 20}
+
+Accessing values:
+print(student["name"])
+
+Updating values:
+student["age"] = 21
+
+Adding new data:
+student["city"] = "Kathmandu"
+
+Common methods:
+- dict[key] → gets a value
+- get(key) → gets a value safely
+- keys() → returns all keys
+- values() → returns all values
+- items() → returns key-value pairs
+- update() → adds or updates data
+- pop() → removes a key-value pair
+- clear() → removes everything
+
+Looping:
+for key in student.keys():
+    print(key)
+
+for value in student.values():
+    print(value)
+
+for key, value in student.items():
+    print(key, value)
+
+Important note:
+- Use {} to create a dictionary
+- Use len(dictionary) to count the number of pairs
+- A dictionary can contain another dictionary inside it
+
+Remember:
+Dictionaries are best for storing related information such as student records, products, or user profiles.
+

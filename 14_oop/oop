@@ -1,0 +1,62 @@
+What is an Object?
+An object is a thing that has:
+    Attributes (data) — what it has.
+    Methods (behavior) — what it can do.
+
+A class is a template for creating objects. One class can create many objects.
+
+The Constructor: __init__
+A constructor runs automatically whenever an object is created. The constructor initializes the object.
+
+The self Keyword - self refers to the current object. You do not pass self yourself.
+Adding Methods - Methods are functions inside a class.
+Instance Variables - Variables stored inside self belong to each object.
+
+Instance vs Class Variables  - 
+| Variable  | Belongs To   |
+| --------- | ------------ |
+| `name`    | Each object  |
+| `college` | Entire class |
+
+The __str__() Method - 
+
+Encapsulation - Encapsulation means keeping data and the methods that operate on that data together inside a class.
+Inheritance - 
+Polymorphism - Different classes can have the same method name but behave differently.
+
+Every instance method needs self as its first parameter.
+
+--- Quick Revision Notes ---
+OOP stands for Object-Oriented Programming.
+It helps organize code by grouping related data and behavior into objects.
+
+Main ideas:
+- Class: a blueprint for creating objects
+- Object: an instance of a class
+- Attribute: data stored in an object
+- Method: a function inside a class
+
+Example:
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        print("Woof")
+
+Important concepts:
+- __init__() runs automatically when an object is created
+- self refers to the current object
+- instance variables belong to each object
+- class variables belong to the whole class
+
+Other concepts:
+- Encapsulation: keep data and methods together
+- Inheritance: one class can use features of another class
+- Polymorphism: different classes can use the same method name differently
+- __str__() is used to define a readable string representation of an object
+
+Remember:
+OOP makes code easier to reuse, manage, and understand.
+
+

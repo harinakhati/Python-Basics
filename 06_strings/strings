@@ -11,3 +11,72 @@ String Slicing- Sometimes you want part of a string.
 
 Strings are immutable, meaning they cannot be modified after they are created.
 
+Common String Methods:
+-   upper()
+-   lower()
+-   title()
+-   capitalize()
+-   strip()
+-   replace()
+-   find()
+-   count()
+-   startswith() and endswith()
+
+
+### Quick Revision Notes for Strings
+
+1. What is a string?
+- A string is a sequence of characters enclosed in single quotes (' ') or double quotes (" ").
+- Example: "Python", 'hello'
+
+2. Accessing characters
+- Each character has an index starting from 0.
+- Example: name[0] gives the first character.
+
+3. String slicing
+- You can get part of a string using slicing.
+- Syntax: string[start:stop:step]
+- Examples:
+  - text[0:5] -> first 5 characters
+  - text[::-1] -> reverse the string
+
+4. Important property: immutability
+- Strings cannot be changed once created.
+- Example: you cannot do text[0] = 'A' directly.
+
+5. Common string methods
+- upper() -> converts to uppercase
+- lower() -> converts to lowercase
+- strip() -> removes spaces from both ends
+- replace(old, new) -> replaces characters
+- find(word) -> finds the position of a substring
+- count(char) -> counts how many times a character appears
+
+6. Useful examples
+- "hello".upper() -> "HELLO"
+- " Python ".strip() -> "Python"
+- "banana".replace("a", "o") -> "bonono"
+
+7. String concatenation
+- You can join strings using +
+- Example: "Hello" + " World" -> "Hello World"
+
+8. String formatting
+- You can insert values into a string using f-strings.
+- Example: name = "Ava"
+  print(f"Hello, {name}")
+
+9. Mini revision checklist
+- Can I create a string?
+- Can I access characters by index?
+- Can I slice a string?
+- Do I know common methods like upper(), lower(), strip(), replace()?
+- Can I reverse a string using slicing?
+
+10. Example practice
+- Reverse a word: word[::-1]
+- Count vowels in a sentence
+- Check whether a word is a palindrome
+
+
+

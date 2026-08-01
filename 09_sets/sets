@@ -1,0 +1,54 @@
+A set is an unordered collection of unique elements.
+
+Unlike lists:
+    A set does not allow duplicates.
+    A set does not preserve indexing (you cannot access elements by position).
+    Sets are optimized for fast searching.
+
+A set automatically removes duplicates.
+
+Sets are extremely fast for checking whether an item exists.
+
+
+pop() -It removes a random element, not the "first" or "last".
+Since sets are unordered, you cannot predict which item is removed.
+
+
+Frozen Sets - A normal set is mutable.
+frozenset is useful when you want an immutable set, but it's used less often than regular sets.
+
+--- Quick Revision Notes ---
+A set is used to store unique values.
+It does not keep order, so you cannot access items by index.
+Duplicates are removed automatically.
+
+Common Set Methods:
+- add(value) → adds one element
+- remove(value) → removes an element; gives an error if missing
+- discard(value) → removes an element; does not give an error
+- pop() → removes a random element
+- clear() → removes all elements
+
+Common Set Operations:
+- union: A | B → all unique elements from both sets
+- intersection: A & B → common elements
+- difference: A - B → elements in A but not in B
+- symmetric difference: A ^ B → elements in one set but not both
+
+Conversion:
+- list → set: set(numbers)
+- set → list: list(unique_set)
+
+Important Note:
+- {} creates an empty dictionary, not an empty set
+- Use set() to create an empty set
+
+Example:
+fruits = {"Apple", "Banana", "Orange"}
+fruits.add("Mango")
+print(fruits)
+
+Remember:
+Sets are useful when you want to remove duplicates and check membership quickly.
+
+

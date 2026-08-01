@@ -1,0 +1,81 @@
+A module is simply a Python file (.py) that contains Python code.
+Importing a Module -- 
+Importing Specific Functions --
+Built-in Modules - Python includes many useful modules in its standard library.
+| Module       | Purpose                        |
+| ------------ | ------------------------------ |
+| `math`       | Mathematical functions         |
+| `random`     | Random numbers                 |
+| `datetime`   | Dates and times                |
+| `os`         | Operating system features      |
+| `sys`        | Python interpreter information |
+| `statistics` | Statistical calculations       |
+
+random --- .randint(), .choice(), .shuffle(), 
+datetime --- .now(), 
+os --- .getcwd(), .listdir(), .mkdir(), rmdir(),
+sys --- .version, .argv, 
+__name__ 
+if __name__ == "__main__":
+    greet()
+Running the file directly executes greet(). Importing the file does not execute it automatically.
+
+
+
+A package is a folder containing related modules.
+    from utilities.calculator import add
+
+Standard Library vs Third-Party Packages
+Standard Library:
+    Included with Python.
+    No installation needed.
+Examples:
+    math
+    random
+    os
+    datetime
+
+Installed separately.
+Examples:
+    numpy
+    pandas
+    requests
+    matplotlib
+
+--- Quick Revision Notes ---
+A module is a Python file that contains reusable code.
+You can import modules to use functions, classes, or variables from them.
+
+Common ways to import:
+import math
+from math import sqrt
+import random
+
+Examples:
+import math
+print(math.sqrt(16))
+
+from random import randint
+print(randint(1, 6))
+
+Useful built-in modules:
+- math → math operations
+- random → random values
+- datetime → date and time
+- os → file and folder operations
+- sys → Python environment information
+
+A package is a folder that contains related modules.
+It helps organize larger projects.
+
+Example:
+from utilities.calculator import add
+
+Important note:
+__name__ is a special variable.
+If a file is run directly, __name__ == "__main__" is true.
+If it is imported, that condition is false.
+
+Remember:
+Modules help you reuse code, and packages help you organize it neatly.
+

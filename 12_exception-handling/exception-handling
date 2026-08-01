@@ -1,0 +1,84 @@
+An exception is an error that occurs while the program is running.
+
+There are two broad types of errors:
+    1. Syntax Errors
+       Python cannot even start running the program.
+
+    2. Exceptions (Runtime Errors)
+        The program starts, but an error occurs while it is running.
+
+The try Block  - The code that might fail goes inside try.
+Python attempts to execute it. If everything works, it skips the except block.
+
+The except Block - If an error occurs inside try, Python jumps to except.
+
+Handling Multiple Exceptions - Different errors require different handling.
+    except ValueError:
+    except ZeroDivisionError:
+    except FileNotFoundError:
+
+Catching Multiple Exceptions Together - Sometimes you want the same response for different exceptions.  
+    except (ValueError, ZeroDivisionError):
+    print("Invalid input.")
+
+The else Block - else runs only if no exception occurs.
+The finally Block - finally always runs. Whether there is an error or not.
+using with open(...) is usually a cleaner approach for files, but finally is still useful for releasing other resources.
+
+Exception Object - You can inspect the actual error.
+Catching All Exceptions - 
+    try:
+    ...
+    except Exception as error:
+        print(error)
+This catches almost every exception.
+However, avoid using it unless you genuinely don't know what might happen. It's usually better to catch specific exceptions like ValueError or ZeroDivisionError.
+
+Raising Your Own Exceptions - You can intentionally stop a program when invalid data is provided.
+
+Assertions - Assertions are mainly used while debugging.
+    age = 20
+    assert age >= 0
+
+assert helps developers catch programming mistakes.
+It should not be used to validate normal user input.
+
+Don't ignore exceptions.  - unless you have a clear reason
+
+--- Quick Revision Notes ---
+Exceptions are errors that happen while a program is running.
+They are different from syntax errors, which happen before the program starts.
+
+Basic structure:
+try:
+    # code that may fail
+except SomeError:
+    # handle the error
+
+Common exception types:
+- ValueError → wrong value type
+- ZeroDivisionError → division by zero
+- FileNotFoundError → file does not exist
+- IndexError → invalid list index
+- KeyError → missing dictionary key
+- TypeError → wrong data type
+
+Useful blocks:
+- try → contains risky code
+- except → handles the error
+- else → runs if no error occurs
+- finally → always runs
+
+Examples:
+try:
+    x = int(input("Enter a number"))
+except ValueError:
+    print("Invalid input")
+
+You can also catch multiple exceptions together:
+except (ValueError, ZeroDivisionError):
+    print("Invalid input")
+
+Important reminder:
+Use specific exceptions when possible, and avoid catching everything unless necessary.
+Assertions are good for debugging, but they are not a replacement for user input validation.

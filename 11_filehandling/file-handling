@@ -1,0 +1,72 @@
+Because variables live only in RAM (memory) while the program is running. If you want data to remain after the program closes, you need files.
+
+A file is permanent storage on your computer.
+CRUD operations:
+    Create
+    Read
+    Update
+    Delete
+
+Opening a File - open(filename, mode)
+If the file already exists, Python raises:  FileExistsError
+
+File Modes:
+"r" -	Read
+"w" -	Write (overwrite)
+"a" -	Append
+"x"	- Create new file
+"rb" -	Read binary
+"wb" -	Write binary
+
+Writing to a File  - file.write("...")
+Closing File - file.close()
+
+Why close()?  -  When Python opens a file, it reserves system resources. Always close it when you're finished.
+
+Reading a File -- file.read()
+Readling one line -- file.readline()
+Reading All Lines  - file.readlines()
+
+Using .strip() removes the newline character.
+
+Appending to a File --- Write mode ("w") replaces everything,  If you want to keep the existing content, use append mode.
+
+The Better Way to open a file: with
+    with open("notes.txt", "r") as file:
+        print(file.read())
+
+When the with block ends, Python automatically closes the file. This is the recommended approach in modern Python.
+
+
+File Paths:
+    open("/home/harina/Documents/notes.txt") -- in other os
+    open("C:\\Users\\Harina\\Documents\\notes.txt")  -- in windows
+    open(r"C:\Users\Harina\Documents\notes.txt")  -- The r creates a raw string, so backslashes don't need escaping.
+
+--- Quick Revision Notes ---
+Files are used to store data permanently, even after the program ends.
+You can create, read, update, and delete files.
+
+Common methods:
+- open() → opens a file
+- read() → reads the whole file
+- readline() → reads one line
+- readlines() → reads all lines as a list
+- write() → writes text to a file
+- close() → closes the file
+
+Best practice:
+Use with open(...) as file: so the file closes automatically.
+
+Example:
+with open("notes.txt", "a") as file:
+    file.write("Hello\n")
+
+Important points:
+- "w" will erase old content and replace it
+- "a" keeps the existing content and adds new content
+- .strip() removes extra spaces and newline characters
+
+Remember:
+File handling helps you save user input, store records, and read data later.
+
